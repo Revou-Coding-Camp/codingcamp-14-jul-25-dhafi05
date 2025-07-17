@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - PT. Inovasi Digital Nusantara</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body align="center" style="margin-top: 30px;">
+  <div class="box">
+    <img src="logo.png" alt="Logo PT. Inovasi Digital Nusantara" class="logo-center">
+    <h2> Selamat Datang!</h2>
+    <h2>Silakan Masukkan Nama Anda Untuk Melanjutkan</h2>
+    <input type="text" id="username" placeholder="Nama Anda" required>
+    <br><br>
+    <button onclick="login()">Masuk</button>
+  </div>
+
+  <script>
+    function login() {
+      const name = document.getElementById("username").value.trim();
+      if (name) {
+        localStorage.setItem("username", name);
+        window.location.href = "index.html";
+      } else {
+        alert("Nama tidak boleh kosong.");
+      }
+    }
+
+    // Jika sudah login sebelumnya, langsung redirect
+    window.onload = function () {
+      const savedName = localStorage.getItem("username");
+      if (savedName) {
+        window.location.href = "index.html";
+      }
+    };
+  </script>
+</body>
+</html>

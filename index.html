@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT. Inovasi Digital Nusantara</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="greetUser()">
+  <header>
+    <div class="navbar-container">
+      <nav>
+        <img src="logo.png" alt="Logo" class="logo">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="profil.html" class="nav-item">Profil Kami</a>
+        <a href="index.html#portfolio" class="nav-item">Portofolio</a>
+        <a href="index.html#contact" class="nav-item">Message Us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2 id="welcome-message">Hi, Welcome to Website</h2>
+      <p> Ini adalah website resmi PT. Inovasi Digital Nusantara.</p>
+      <img src="banner.png" alt="Banner" class="banner">
+    </section>
+
+    <section class="headquarters">
+      <h2>Our Headquarter</h2>
+      <div class="locations">
+        <div class="city">Jakarta</div>
+        <div class="city">Bandung</div>
+        <div class="city">Surabaya</div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h2>Our Portofolio</h2>
+      <div class="portfolio-items">
+        <div class="portfolio-card">
+          <img src="project1.png" alt="Project 1">
+          <h3>Website Perusahaan</h3>
+          <p>Pembuatan website profil perusahaan modern berbasis responsive design.</p>
+        </div>
+        <div class="portfolio-card">
+          <img src="project2.png" alt="Project 2">
+          <h3>Aplikasi Mobile</h3>
+          <p>Aplikasi Android untuk layanan logistik dengan fitur tracking real-time.</p>
+        </div>
+        <div class="portfolio-card">
+          <img src="project3.png" alt="Project 3">
+          <h3>Pengembangan Talenta Digital</h3>
+          <p>Mengembangkan talenta digital yang kompeten dan berdedikasi.</p>
+        </div>        
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Message Us</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="phone" placeholder="Phone" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit Message</button>
+      </form>
+      <div id="form-message"></div>
+      <div style="text-align: center; margin-top: 30px;">
+        <button onclick="logout()">Keluar Website</button>
+        <script>
+          function logout() {
+            localStorage.removeItem("username");
+            window.location.href = "login.html";
+          }
+        </script>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Muhammad Dhafi Sukandar</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("nav-links");
+      menu.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

@@ -1,120 +1,191 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
 
-  footer {
-   text-align: center;
-   padding: 20px;
-   background-color: #212d45;
-   color: #fff;
-   margin-top: 40px;
- }
-  
+.hero {
+  padding: 2rem;
+  text-align: left;
+}
+
+.navbar-container {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav a.nav-item {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a.nav-item:hover {
+  background-color: #344568;
+  color: #fff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+}
+
+.logo {
+  height: 30px;
+  margin-right: auto;
+}
+
+.logo-center {
+  display: block;
+  margin: 10px auto 10px auto; /* atas, kanan-kiri, bawah */
+  max-width: 200px; /* ubah sesuai ukuran yang diinginkan */
+  height: auto;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.headquarters {
+  padding: 2rem;
+  text-align: left;
+}
+
+.headquarters .locations {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.city {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  padding: 25px 20px;
+  background-color: #fff;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 800px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  color: #212d45;
+}
+
+.portfolio {
+  padding: 2rem;
+  text-align: left;
+}
+
+.portfolio-items {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.portfolio-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.portfolio-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.portfolio-card h3 {
+  color: #212d45;
+  margin: 0.5rem 0 0.3rem;
+}
+
+.portfolio-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.contact {
+  padding: 2rem;
+  text-align: left;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.8rem;
+  background-color: #344568;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #212d45;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  margin-top: 2rem;
+}
+
+/* Add boxed styling */
+.box {
+  max-width: 800px;
+  background-color: #fff;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
   nav {
-    background-color: #212d45;   /* hijau segar */
-    padding: 12px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s, padding 0.3s;
-    padding: 8px 12px;
-    border-radius: 4px;
-  }
-  
-  nav a:hover {
-    background-color: #35475d;
-  }
-  
-  .banner {
-    text-align: center;
-    padding: 30px;
-    background-color: #e8f5e9;
-    color: #212d45;
-  }
-  
-  .banner img {
-    max-width: 300px;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  section {
-    padding: 25px 20px;
-    background-color: #fff;
-    margin: 20px auto;
-    border-radius: 8px;
-    max-width: 800px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  
-  section h2 {
-    color: #212d45;
-  }
-  
-  form {
-    display: flex;
     flex-direction: column;
-    gap: 12px;
+    align-items: flex-start;
   }
-  
-  form input,
-  form textarea {
-    padding: 10px;
-    font-size: 1em;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    transition: border-color 0.3s;
-  }
-  
-  form input:focus,
-  form textarea:focus {
-    border-color: #212d45;
-    outline: none;
-  }
-  
-  form button {
-    padding: 12px;
-    font-size: 1em;
-    cursor: pointer;
-    background-color: #212d45;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  form button:hover {
-    background-color: #35475d;
-  }
-  
 
-  #formResponse {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #212d45;
+  .headquarters .locations {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  @media (max-width: 600px) {
-    nav {
-      flex-direction: column;
-    }
-  
-    form input,
-    form textarea {
-      width: 100%;
-    }
-  }
-  
+}
